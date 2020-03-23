@@ -95,5 +95,28 @@ current_year = 2020
 age = current_year - int(birth_year)
 print(f"your age is {age}")
 
+#password checker
+user_name = input('Enter your user name: ')
+password = input('Enter your password: ')
+hidden_password = '*' * len(password)
+print(f'Hi {user_name}, your password {hidden_password} is {len(password)} letters long')
 
-print(selfish[8])
+#list initializing
+amazon_cart = ['notebooks', 
+'sunglasses',
+'toys',
+'grapes'
+]
+print(amazon_cart)
+#list slicing
+print(amazon_cart[0:2])
+#list append
+amazon_cart[0] = 'laptop'
+new_cart = amazon_cart[0:3]
+print(new_cart)
+#new_cart = amazon_cart doesn't create a copy of amazon_cart. instead refers to the same list
+new_cart = amazon_cart[:]
+new_cart[0] = 'gum'
+print(new_cart)
+print(amazon_cart)
+
