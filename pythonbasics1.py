@@ -120,3 +120,11 @@ new_cart[0] = 'gum'
 print(new_cart)
 print(amazon_cart)
 
+#matrix
+matrixtest = [
+  [1,0,2],
+  [2,4,6],
+  [3,6,9]
+]
+print(matrixtest[0][2])
+
