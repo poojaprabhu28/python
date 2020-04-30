@@ -128,3 +128,75 @@ matrixtest = [
 ]
 print(matrixtest[0][2])
 
+#operations on lists
+#functions
+basket = [1,2,3,4,5]
+print(len(basket))
+
+#methods
+basket.append(100)
+print(basket)
+basket.insert(4,150)
+print(basket)
+basket.extend([200])
+print(basket)
+
+#removing
+basket.pop()  #pops the end of the list
+print(basket)
+basket.pop(0) #removes the object at index 0
+print(basket)
+
+new_list = basket.pop(2)
+print(new_list)   #element at index 2
+basket.clear()
+print(basket)   #clears contents of basket
+
+basket = ['a','b','c','d','e','d']
+#print(basket.index('c',0,2))    #gives value error 'c' is not in list
+print(basket.index('c',0,3))    #check availability in list within given range
+print('d' in basket)
+print('x' in basket)    #returns false as x is not in basket
+print('i' in 'Hi my name is Ian')
+print(basket.count('d'))    #gives count of number of times a value is repeated
+
+basket = ['b','x','c','d','e','d','a']
+
+basket.sort()
+print(basket)
+#print(sorted(basket))     #creates a new list of sorted basket. original basket remains unchanged as below
+#print(basket)
+
+#new_basket = basket.copy()
+#print("new_basket")
+#print(new_basket)
+
+basket.reverse()
+print(basket)
+
+basket.sort()
+basket.reverse()
+#print(basket[::-1])   #new list
+#print(basket)   #original basket
+
+#print(list(range(1,100)))
+#print(list(range(100)))    3starts from 0
+
+sentence = ' '
+new_sentence = sentence.join(['hi','my','name','is','Pooja'])   #join uses the string/item in sentence to join the list input and form the new string new_sentence
+print(new_sentence)
+
+#list unpacking 
+
+a,b,c, *other,d = [1,2,3,4,5,6,7,8,9]
+print(a)
+print(b)
+print(c)
+print(other)
+print(d)
+
+#None is a special datatype in python. Similar to null
+#example in a game for a new user
+wepons = None
+print(wepons)
+
