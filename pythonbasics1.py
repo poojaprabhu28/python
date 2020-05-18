@@ -200,3 +200,76 @@ print(d)
 wepons = None
 print(wepons)
 
+#dictionary has unordered key-value pairs (not adjecent in position in memory)
+#key is a string used to access its adjoining value
+#dictionary holds more value than, say, list
+dictionary = {
+  'a' : [1,2,3],
+  'b' : "Hello",
+  'x' : True
+}
+
+my_list = [
+  {
+    'a' : [1,2,3],
+  'b' : "Hello",
+  'x' : True
+  },
+  {
+    'a' : [4,5,6],
+  'b' : "Hello",
+  'x' : True
+  }
+]
+
+print(my_list[0]['a'][2])
+print(dictionary['a'][0])
+
+#a key needs to be immutable i.e it cannot change
+#a key needs to be unique
+dictionary = {
+  '123' : [1,2,3],
+  '123' : "Hello",    #value of '123' is overrriden
+  True : "Hello",
+  [100] : True    #gives error- TypeError: unhashable type: 'list
+}
+
+#Dictionary methods
+user = {
+  'basket' : [1,2,3],
+  'greet' : "Hello"
+}
+
+user2 = dict(name='Pooja')    #creates a dictionary entry dict(key=vlue)
+
+print(user2)
+#print(user.get('age'))      #check's if a key exists in the dict
+#print(user.get('age', 55))
+
+user = {
+  'basket' : [1,2,3],
+  'greet' : "Hello",
+  'age' :20
+}
+
+print('age' in user.keys())   #checks for a key's existance
+print('Hello' in user.values())   #checks for a value's existance
+print(user.items())   #gives key value pairs as tuples
+
+user = {
+  'basket' : [1,2,3],
+  'greet' : "Hello",
+  'age' :20
+}
+
+#user2 = user.copy()   #copies a dicctionary
+#user.clear()          #clears a dictioanries of its values
+#user2.pop('age')      #removes
+
+#print(user)   
+#print(user2)
+#print(user2.pop('age'))      #removes/ returns some pair of key- value
+print(user.update({'age':55}))    #updates an existing key's value
+print(user)
+
+#Tuples
