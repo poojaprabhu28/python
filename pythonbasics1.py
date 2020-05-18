@@ -269,7 +269,7 @@ user = {
 #print(user)   
 #print(user2)
 #print(user2.pop('age'))      #removes/ returns some pair of key- value
-print(user.update({'age':55}))    #updates an existing key's value
+print(user.update({'age':55}))    #updates an existing key's value, or adds a new key along with new value, if key doesn't exist
 print(user)
 
 #Tuples
