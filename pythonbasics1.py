@@ -272,4 +272,52 @@ user = {
 print(user.update({'age':55}))    #updates an existing key's value, or adds a new key along with new value, if key doesn't exist
 print(user)
 
-#Tuples
+#Tuples are immutable lists, so its a valid key in python
+#if you don't need to change the list, make it a tuple
+#faster than a list because they are less flexible
+
+my_tuple = (1,2,3,4,5)
+
+print(my_tuple[2])
+print(5 in my_tuple)    #returns True
+new_tuple = my_tuple[1:4]   #slicing the tuple my_tuple
+
+x,y,z, *other = (1,2,3,4,5)
+
+print(z)    #returns 3
+print(other)    #returns [4,5]
+
+my_tuple = (1,2,3,4,5,1,2,1,5)
+
+print(my_tuple.count(1))    #counts the no. of occurance of item in tuple
+print(len(my_tuple))      #returns length of tuple i.e. no. of elements
+
+#Set is unordered collection of unique objects
+
+my_set = {1,2,3,4,5}
+my_set.add(100)
+my_set.add(2)   #doesn't add repeated elements
+print(my_set)   #prints unique elements
+
+my_list = [1,2,3,4,5,5]
+print(set(my_list))   #removes duplicates and converts to set 
+my_set = {1,2,3,4,5,5}
+new_set = my_set.copy()   #copies a set
+
+#methods for sets
+my_set = {1,2,3,4,5}
+your_set = {4,5,6,7,8,9,10}
+
+#print(my_set.difference(your_set))    #removes common elements 
+#print(my_set.discard(5))    #discards mentioned element
+#print(my_set)     #resultant set
+#print(my_set.difference_update(your_set))   #differences are removed and my_set is updated
+#print(my_set)   #updated my_set
+#print(my_set.intersection(your_set))    #returns intersection of the two sets
+#print(my_set & your_set)      #intersection of sets
+#print(my_set .isdisjoint(your_set))     #returns False because they have {4,5} in common
+#print(my_set.union(your_set))   #united the sets and removed duplicates
+#print(my_set | your_set)      #union of sets
+#print(my_set.issubset(your_set))      #returns true if my_set is subset of your_set
+#print(your_set.issuperset(my_set))      #returns true if your_set is super set of my_set
+
